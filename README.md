@@ -51,7 +51,7 @@ Projet-Capstone/
 │   ├── SST_Mediterranee_map.html
 │   ├── emissions_codecarbon.csv
 │   └── impact_estimate.json
-│
+├── Exécution.png
 ├── Capstone.py             # Script principal
 ├── requirements.txt        # Dépendances Python
 ├── .gitignore
