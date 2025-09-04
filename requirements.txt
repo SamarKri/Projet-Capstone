@@ -1,0 +1,6 @@
+
+xarray
+numpy
+matplotlib
+folium
+codecarbon
