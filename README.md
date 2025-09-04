@@ -3,9 +3,9 @@
 
 
 ## Résumé du projet
-Ce dépôt contient un **exemple technique** pour extraire, traiter et visualiser la Sea Surface Temperature (SST) pour la Méditerranée de manière **optimisée et à faible empreinte numérique**. 
+Ce dépôt contient un **exemple technique** pour extraire, traiter et visualiser la température de surface de la mer (SST) en Méditerranée de manière **optimisée et à faible empreinte numérique**. 
 
-Ce code est la version une version complète et cohérente pour mon projet Capstone, il répond à ces exigences :
+Cette version du code du projet Capstone répond aux exigences suivantes :
 - Lecture d’un fichier NetCDF Copernicus local.
 - Calcul des statistiques SST (mean, min, max, médiane).
 - Création d’une carte Folium avec sous-échantillonnage pour éviter des temps de calcul trop longs.
@@ -44,7 +44,7 @@ python Capstone.py
 - `outputs/emissions_codecarbon.csv` : Résultats CodeCarbon (si activé).
 
 ## 📂 Structure du Projet
-Capstone-SST-Project/
+Projet-Capstone/
 ```plaintext
 ├── outputs/               # Résultats générés automatiquement
 │   ├── summary.json
