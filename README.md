@@ -11,13 +11,11 @@ Ce code est la version une version complète et cohérente pour mon projet Capst
 - Création d’une carte Folium avec sous-échantillonnage pour éviter des temps de calcul trop longs.
 - Suivi de l’empreinte carbone avec CodeCarbon et sauvegarde en impact_estimate.json.
 
-
 ## Contenu du dépôt
 
 - `Capstone.py` : Script Python complet (options CLI).
 - `README_GitHub.md` : Ce fichier (version courte).
 - `outputs/` : Dossier créé après exécution contenant résumé, carte HTML et estimations d'impact.
-
 
 ## 🛠️  Installation
 
@@ -27,18 +25,14 @@ git clone https://github.com/tonpseudo/Capstone-SST-Project.git
 cd Capstone-SST-Project
 
 ### Créer un environnement virtuel
-
 python -m venv venv
 venv\Scripts\activate      # Windows PowerShell
 
 ### Installer les dépendances
-
 pip install -r requirements.txt
-
 ```
 
 ## Exécution 
-
 ```bash
 python Capstone.py 
 ```
@@ -49,8 +43,9 @@ python Capstone.py
 - `outputs/impact_estimate.json` : Estimation simple des transferts et CO₂ évités.
 - `outputs/emissions_codecarbon.csv` : Résultats CodeCarbon (si activé).
 
+## 📂 Structure du Projet
 Capstone-SST-Project/
-
+```plaintext
 ├── outputs/               # Résultats générés automatiquement
 │   ├── summary.json
 │   ├── SST_Mediterranee_map.html
@@ -62,7 +57,7 @@ Capstone-SST-Project/
 ├── .gitignore
 ├── README.md
 └── LICENSE
-
+```
 
 ## Résultats du script
 Statistiques SST (Sea Surface Temperature) :
@@ -73,7 +68,6 @@ Moyenne de température : ~297.25 K (~24,1°C)
 Minimum : ~286.62 K (~13,5°C)
 Maximum : ~303.95 K (~30,8°C)
 Médiane : 298.34 K (~25,2°C)
-
 Carte sauvegardée : outputs\SST_Mediterranee_map.html ✅
 
 ## Consommation énergétique estimée par CodeCarbon
@@ -91,9 +85,7 @@ CO₂ émis : 0.000014 kg
     - impact_estimate.json → estimation CO₂
 
 
-
 ## Licence
-MIT License — tu es libre d'adapter et de réutiliser ce code pour des fins académiques et non commerciales. 
+MIT License — tu es libre d'adapter et de réutiliser ce code pour des fins académiques et non commerciales.
+
 *Samar Krimi — Capstone: SST Méditerranée (Green Digital Certificate)*
-
-
