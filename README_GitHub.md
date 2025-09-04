@@ -1,4 +1,4 @@
-# Capstone — SST Méditerranée (Pipeline optimisé)
+# 🌊 Capstone - Analyse de la Température de Surface de la Mer (SST) en Méditerranée
 **Auteur**: Samar Krimi
 
 
@@ -18,12 +18,22 @@ Ce code est la version une version complète et cohérente pour mon projet Capst
 - `README_GitHub.md` : Ce fichier (version courte).
 - `outputs/` : Dossier créé après exécution contenant résumé, carte HTML et estimations d'impact.
 
-## Installation (recommandée)
+
+## 🛠️  Installation
+
+### Cloner le dépôt
+```bash
+git clone https://github.com/tonpseudo/Capstone-SST-Project.git
+cd Capstone-SST-Project
+
+### Créer un environnement virtuel
 ```bash
 python -m venv venv
 venv\Scripts\activate      # Windows PowerShell
 
-pip install xarray numpy matplotlib folium codecarbon
+### Installer les dépendances
+```bash
+pip install -r requirements.txt
 
 ```
 
@@ -39,6 +49,20 @@ python Capstone.py
 - `outputs/SST_Mediterranee_map.html` : Carte interactive Folium (ouvrir dans navigateur).
 - `outputs/impact_estimate.json` : Estimation simple des transferts et CO₂ évités.
 - `outputs/emissions_codecarbon.csv` : Résultats CodeCarbon (si activé).
+
+Capstone-SST-Project/
+├── outputs/               # Résultats générés automatiquement
+│   ├── summary.json
+│   ├── SST_Mediterranee_map.html
+│   ├── emissions_codecarbon.csv
+│   └── impact_estimate.json
+│
+├── Capstone.py             # Script principal
+├── requirements.txt        # Dépendances Python
+├── .gitignore
+├── README.md
+└── LICENSE
+
 
 ## Estimation d'impact détaillée (méthodologie)
 Les estimations fournies sont **indicatives** et reposent sur hypothèses simples :  
