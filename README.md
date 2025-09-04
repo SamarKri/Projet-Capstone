@@ -27,19 +27,18 @@ git clone https://github.com/tonpseudo/Capstone-SST-Project.git
 cd Capstone-SST-Project
 
 ### Créer un environnement virtuel
-```bash
+
 python -m venv venv
 venv\Scripts\activate      # Windows PowerShell
 
 ### Installer les dépendances
-```bash
+
 pip install -r requirements.txt
 
 ```
 
 ## Exécution 
 
-### Script CLI
 ```bash
 python Capstone.py 
 ```
@@ -51,6 +50,7 @@ python Capstone.py
 - `outputs/emissions_codecarbon.csv` : Résultats CodeCarbon (si activé).
 
 Capstone-SST-Project/
+
 ├── outputs/               # Résultats générés automatiquement
 │   ├── summary.json
 │   ├── SST_Mediterranee_map.html
@@ -64,26 +64,36 @@ Capstone-SST-Project/
 └── LICENSE
 
 
-## Estimation d'impact détaillée (méthodologie)
-Les estimations fournies sont **indicatives** et reposent sur hypothèses simples :  
-- Taille du dataset annuel SST (méthode classique) : **~10 Go** (exemple)  
-- Extraction optimisée (sous-ensemble spatial + un jour) : **~0.1 Go**  
-- Facteur d'émission réseau (approx.) : **0.06 kg CO₂ / Go** (valeur indicative, ADEME-like)  
-
-Calcul :  
+## Résultats du script
+Statistiques SST (Sea Surface Temperature) :
+```python
+{'mean': 297.25, 'min': 286.62, 'max': 303.95, 'median': 298.34}
 ```
-CO2_full = 10 * 0.06 = 0.6 kg CO2 par extraction complète
-CO2_opt  = 0.1 * 0.06 = 0.006 kg CO2 par extraction optimisée
-CO2_saved = CO2_full - CO2_opt = 0.594 kg CO2  (~99% de réduction sur cet exemple)
+Moyenne de température : ~297.25 K (~24,1°C)
+Minimum : ~286.62 K (~13,5°C)
+Maximum : ~303.95 K (~30,8°C)
+Médiane : 298.34 K (~25,2°C)
+
+Carte sauvegardée : outputs\SST_Mediterranee_map.html ✅
+
+## Consommation énergétique estimée par CodeCarbon
+```yaml
+Energy consumed for RAM : 0.000002 kWh
+Delta energy consumed for CPU : 0.000024 kWh, power : 140.0 W
+Total energy : 0.000025 kWh
+CO₂ émis : 0.000014 kg
 ```
 
-> Remarque : ces valeurs varient selon la source des données, la topologie réseau et la mesure précise par l'infrastructure cloud. Pour des analyses précises, corréler les métriques `codecarbon` avec logs cloud (eg. egress bytes, storage API metrics).
+- Consommation totale très faible (25 µWh), normal pour un script Python léger.
+- Émissions de CO₂ quasi négligeables (14 mg).
+- Fichiers de sortie :
+    - emissions_codecarbon.csv → suivi de la consommation
+    - impact_estimate.json → estimation CO₂
+
+
 
 ## Licence
 MIT License — tu es libre d'adapter et de réutiliser ce code pour des fins académiques et non commerciales. 
-
-## Attribution & citation
-Si tu utilises ce travail dans un rapport ou une publication, cite le projet :  
 *Samar Krimi — Capstone: SST Méditerranée (Green Digital Certificate)*
 
 
